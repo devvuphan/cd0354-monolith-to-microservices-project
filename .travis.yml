@@ -17,7 +17,7 @@ script:
   - docker --version
   
   - docker build -t reverseproxy ./udagram-reverseproxy
-  - docker tag reverseproxy vupa1/udagram-reverseproxy:latest
+  - docker tag reverseproxy vupa1/reverseproxy:latest
 
   - docker build -t udagram-frontend ./udagram-frontend
   - docker tag udagram-frontend vupa1/udagram-frontend:latest
@@ -30,7 +30,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push vupa1/udagram-reverseproxy
+  - docker push vupa1/reverseproxy
   - docker push vupa1/udagram-frontend
   - docker push vupa1/udagram-api-user
   - docker push vupa1/udagram-api-feed
