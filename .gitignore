@@ -41,3 +41,8 @@ venv/
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 set_env.sh
+deployment/kubectl.sha256
+kubectl
+kubectl.sha256
+deployment/aws-iam-authenticator
+deployment/aws-iam-authenticator.sha256
