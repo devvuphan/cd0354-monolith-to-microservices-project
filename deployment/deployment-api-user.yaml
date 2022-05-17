@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: backend-user
@@ -16,7 +16,7 @@ spec:
         app: backend-user
     spec:
       containers:
-      - image: vupa1/udagram-api-user:v1
+      - image: vupa1/udagram-api-user:v2
         name: udagram-api-user
         imagePullPolicy: Always          
         resources:
